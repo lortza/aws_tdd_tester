@@ -34,12 +34,16 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'awesome_print' #makes command line data prettier
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem "database_cleaner"
   gem "rspec-rails"
+  gem 'better_errors' #creates console in browser for errors
+  gem 'binding_of_caller' #goes with better_errors
 end
 
 group :development do

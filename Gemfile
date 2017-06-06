@@ -35,6 +35,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'awesome_print' #makes command line data prettier
+gem 'figaro' #for AWS
+# gem 'puma' #for AWS application server
 
 
 group :development, :test do
@@ -56,7 +58,11 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem "capybara"
   gem "selenium-webdriver"
-
+  gem 'capistrano'  #for AWS deployment
+  gem 'capistrano3-puma' #for AWS application server
+  gem 'capistrano-rails', require: false #for AWS deployment
+  gem 'capistrano-bundler', require: false  #for AWS deployment
+  gem 'capistrano-rvm'  #for AWS deployment
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
